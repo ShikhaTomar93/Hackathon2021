@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
       if(e)
       this.dashboard = true;
       this.newUser = false;
+      this.pageChange = true
     }
     private setCurrentLocation() {
       if ('geolocation' in navigator) {
@@ -66,7 +67,7 @@ export class LoginComponent implements OnInit {
         });
       }
     }
-    
+
     getAddress(latitude, longitude) {
       this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
         if (status === 'OK') {
@@ -83,9 +84,12 @@ export class LoginComponent implements OnInit {
         }
         console.log(this.lat)
       });
-      
+
     }
     openChat(){
       this.chatOpen = true
+    }
+    flwValue(e){
+      this.flw = e
     }
   }
