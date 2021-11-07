@@ -1,0 +1,44 @@
+[
+{
+  "username": "dhruvdangwal@ymail.com",
+  "password": "pass",
+  "frontline": 1,
+  "location": "",
+  "zipcode": "",
+  "state": "",
+  "country": "",
+  "points": "100",
+  "availability": 1,
+  "schedule": {
+    "monday": [("0800","1000"),("1300","1500"),("1600","2000")],
+    "tuesday": [],
+    "wednesday": [("0900","1000"),("1500","2000")],
+    "thursday" : [("0900","2000"),("1500","2000"),("2100","2300")],
+    "friday": [("0200","0500"),("0800","1030")],
+    "saturday": [("0200","0500"),("1030","1830")],
+    "sunday": [("0730","1130"),("1300","1530"),("1930","2330")]
+  },
+  "feedback": [
+    {
+      "rating": 5,
+      "served": "Sam",
+      "task": "Needs Medicine"
+    },
+    {
+      "rating": 4,
+      "served": "Jim",
+      "task": "SOS"
+    },
+    {
+      "rating": 3,
+      "served": "Alex",
+      "task": "Get to Hospital"
+    }
+
+  ],
+  "Skills":["CPR","Dietician","Nurse"],
+  "License": 1
+}
+]
+
+
