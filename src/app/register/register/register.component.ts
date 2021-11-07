@@ -7,9 +7,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   @Output() registr: EventEmitter<any> = new EventEmitter<any>();
+  flw:boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+  changeStatus(){
+    this.flw = !this.flw;
   }
   register(){
     this.registr.emit(true)

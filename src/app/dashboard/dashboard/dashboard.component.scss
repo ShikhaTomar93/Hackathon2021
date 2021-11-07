@@ -40,6 +40,7 @@
 
 .session {
     margin-bottom: 1em;
+    width: 50px
 }
 
 @supports( display:grid) {
@@ -82,6 +83,7 @@
 .time-slot {
     margin: 0;
     font-size: 1em;
+    word-break: break-all;
 }
 
 .session-title a {
@@ -187,4 +189,14 @@ table {
 
 .btn {
     padding: 4px 12px;
+    margin: 5px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    width: 50px!important;
 }

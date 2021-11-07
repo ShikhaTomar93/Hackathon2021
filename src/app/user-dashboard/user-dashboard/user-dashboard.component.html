@@ -1,0 +1,84 @@
+<div class="user-dashboard">
+    <div class="left-side-data">
+        <h3>Find Nearest Doctor</h3>
+        <div *ngIf="!showDoctors">
+            <div *ngFor="let item of items" (click)="chooseField(item)">
+                {{item}}
+            </div>
+        </div>
+        <div *ngIf="showDoctors">
+            <div *ngFor="let doc of doctors">
+                <div (click)="bookappointment()">{{doc['name'] }} , {{ doc['degree']}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side-data">
+        <div class="tasks-completed">
+            <h3 class="schedule-heading">Past Appointments</h3>
+            <table class="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Task</th>
+                    <th>Feedback</th>
+                    <th>Help-coins</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wanda Maximoff</td>
+                        <td>Grocery delivered</td>
+                        <td><a href="#" (click)="givefeedbak">Give Feedback</a></td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Parker</td>
+                        <td>BP Monitoring</td>
+                        <td>Helpful<span class="badge" style="vertical-align: unset;margin-left: 5px">4/5</span></td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>Nick Fury</td>
+                        <td>Swab Test</td>
+                        <td>Poor<span class="badge" style="vertical-align: unset;margin-left: 5px">2/5</span></td>
+                        <td>20 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="custom-modal" *ngIf="isModel" id="">
+    <div class="overlay" (click)="close();">X</div>
+    <div class="linkDeliverablesModal component-modal">
+        <div>
+            <h3>Book Appointment</h3>
+        </div>
+        <div><label for="appointment">Select Date and Time</label>
+            <input type="datetime-local" id="appointment" name="appointmenttime">
+        </div>
+        <div style="float: right;">
+            <button class="btn btn-primary" (click)="bookAppoin()">Book</button>
+        </div>
+    </div>
+</div>
+<div class="custom-modal" *ngIf="isFeedback" id="">
+    <div class="overlay" (click)="close();">X</div>
+    <div class="linkDeliverablesModal component-modal">
+        <div>
+            <h3>Give Feedback</h3>
+        </div>
+        <div><label for="feedback-text"></label>
+            <textarea id="feedback-text" style="width: 80%;"></textarea>
+        </div>
+        <div>
+            <label>Rating</label>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <div style="float: right;">
+            <button class="btn btn-primary" (click)="bookAppoin()">Book</button>
+        </div>
+    </div>
+</div>
