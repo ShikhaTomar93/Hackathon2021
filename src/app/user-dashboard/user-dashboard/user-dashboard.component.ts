@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
-
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html',
@@ -15,24 +16,29 @@ export class UserDashboardComponent implements OnInit {
   showDoctors:boolean=false
   isModel = false;
   dateTime
-  isFeedback:false;
-  constructor() { }
+  isFeedback:boolean=false;
+  isMedi:boolean=false
+  url = 'https://mail.google.com/chat/u/0/#chat/welcome';
+  constructor(private sanitizer: DomSanitizer,private Router:Router) { }
 
   ngOnInit() {
+    //this.newurl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url)
+    this.Router.navigate([this.url]);
   }
-  chooseField(e){
+  chooseField(e): void{
     this.showDoctors = true;
     console.log(this.doctors)
   }
   bookappointment(){
     this.isModel = true
   }
-  giveFeedback(){
-    this.isFeedback = true;
+  openMedi(){
+    this.isMedi = true
   }
   close(){
     this.isModel = false;
     this.isFeedback = false;
+    this.isMedi = false
   }
   bookAppoin(){
     this.isModel = false;
@@ -41,5 +47,8 @@ export class UserDashboardComponent implements OnInit {
   saveFeedback(){
     this.isFeedback = false;
     alert('Feedback saved Successfully!!')
+  }
+  giveFeedback(){
+    this.isFeedback = true;
   }
 }

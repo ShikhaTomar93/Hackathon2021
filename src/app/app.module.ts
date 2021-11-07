@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { AgmCoreModule } from '@agm/core';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard/user-dashboard.component';
+import { ChatBotComponent } from './chat-bot/chat-bot/chat-bot.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard/user-das
     RegisterComponent,
     DashboardComponent,
     UserDashboardComponent,
+    ChatBotComponent,
   ],
   imports: [
     HttpClientModule,

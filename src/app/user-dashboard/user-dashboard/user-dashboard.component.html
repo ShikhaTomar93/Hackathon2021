@@ -44,6 +44,12 @@
                 </tbody>
             </table>
         </div>
+        <div class="diagonosis">
+            <i class="fa fa-info"><a href={{url}} target="_blank">Click here to self diagonise</a></i>
+        </div>
+        <div class="diagonosis">
+            <a (click)="openMedi()">Click here to self meditation video</a>
+        </div>
     </div>
 </div>
 <div class="custom-modal" *ngIf="isModel" id="">
@@ -80,5 +86,15 @@
         <div style="float: right;">
             <button class="btn btn-primary" (click)="bookAppoin()">Book</button>
         </div>
+    </div>
+</div>
+<div class="custom-modal" *ngIf="isMedi" id="">
+    <div class="overlay" (click)="close();">X</div>
+    <div class="linkDeliverablesModal component-modal" style="max-height: 400px;">
+        <div>
+            <h3>Guided Meditation</h3>
+        </div>
+        <iframe width="580" height="250" src="https://www.youtube.com/embed/ssss7V1_eyA">
+</iframe>
     </div>
 </div>

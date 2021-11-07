@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   address: any;
   private geoCoder;
   zoom: number;
+  chatOpen: boolean;
   constructor(private router: Router, private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone) { }
 
@@ -83,5 +84,8 @@ export class LoginComponent implements OnInit {
         console.log(this.lat)
       });
       
+    }
+    openChat(){
+      this.chatOpen = true
     }
   }
