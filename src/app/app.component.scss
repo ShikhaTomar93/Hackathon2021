@@ -1,0 +1,95 @@
+.header .navbar-form .input-group-btn button {
+    margin-left: 0px!important;
+    padding: 9px 12px!important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+.navigation {
+    width: 100%;
+    background-color: black;
+    float: right;
+}
+
+phone-class {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+}
+
+.logout {
+    color: white;
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    right: -12px;
+    bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+}
+
+.button-a {
+    text-decoration: none;
+    float: right;
+    margin: 15px;
+    color: white;
+    width: 45px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+}
+
+a:hover {
+    width: 100px;
+}
+
+a:hover .logout {
+    opacity: .9;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login-form-btns {
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 85%;
+    left: 79%;
+}
+
+.navbar {
+    border-radius: 0!important;
+    margin-bottom: 0!important;
+}
+
+.navbar-nav {
+    float: right!important;
+}
+
+.banner-content-wrapper {
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+    position: absolute;
+    margin: 0 auto;
+    left: 42%;
+}
+
+.alert-bar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.alert-bar img {
+    height: 25px;
+}
+
+.send-sos {
+    color: white;
+    display: inline-block;
+}
