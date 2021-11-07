@@ -2,8 +2,11 @@
     <div *ngIf="!pageChange" style="width: 72%;float: left;"><img src="./assets/landing.jpg" style="width: 95%;"></div>
     <div *ngIf="!pageChange" class="login-form" style="padding-top: 35px;">
         <div *ngIf="initialPage" class="initialPage">
+            <img class="mlh" src="./assets/mlh.jpg">
+            <label style="margin-left: 15px;">P2P Frontline Worker Facilator</label>
             <button class="btn btn-primary" (click)="buttonClick('new')">New User</button>
             <button class="btn btn-primary" (click)="buttonClick('exist')">Existing User</button>
+            <img src="./assets/ubhacking.jpg" class="ubh">
         </div>
         <form style="height: 76%;padding-top: 50px" *ngIf="existingUser">
 
@@ -30,7 +33,11 @@
             </div>
         </form>
         <div *ngIf="newUser">
+<<<<<<< Updated upstream
             <app-register (flww)="flwValue($event)" (registr)="registr($event)"></app-register>
+=======
+            <app-register (flww)="flow($event)" (registr)="registr($event)"></app-register>
+>>>>>>> Stashed changes
         </div>
     </div>
     <div *ngIf="dashboard">
