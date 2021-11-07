@@ -56,6 +56,12 @@ export class LoginComponent implements OnInit {
       this.dashboard = true;
       this.newUser = false;
       this.pageChange = true
+<<<<<<< Updated upstream
+=======
+    }
+    flow(e){
+      this.flw = e;
+>>>>>>> Stashed changes
     }
     private setCurrentLocation() {
       if ('geolocation' in navigator) {

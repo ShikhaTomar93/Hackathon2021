@@ -1,9 +1,25 @@
 .initialPage {
     position: absolute;
+<<<<<<< Updated upstream
     top: 58%;
+=======
+    top: 12%;
+>>>>>>> Stashed changes
     left: 76%;
     button {
-        margin: 10px;
+        margin: 30px 10px;
+    }
+    img {
+        &.mlh {
+            background-color: white;
+            height: 145px;
+            width: 240px;
+            display: block;
+        }
+        &.ubh {
+            width: 208px;
+            margin-left: 27px;
+        }
     }
 }
 
